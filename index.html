@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Fruition, LLC - Certificate Authority</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1, h2 {
+            color: #333366;
+        }
+        p {
+            color: #333;
+        }
+        img.logo {
+          max-width: 2in;
+          max-height: 2in;
+          margin: 20px auto;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Digital Fruition, LLC's Certificate Authority</h1>
+    <img class="logo" src="images/df-ca_logo.png" alt="Logo for Digital Fruition CA">
+    <p>
+        A Certificate Authority (CA) is a trusted entity that issues digital certificates. These certificates are used to verify the identity of organizations and individuals on the internet, ensuring secure communication and transactions.
+    </p>
+    <h2>About This CA</h2>
+    <p>
+        This Certificate Authority is operated by Digital Fruition, LLC for the purpose of providing digital certificates to its software, services, and clients. It ensures a trusted and secure communication channel for all associated services. The CA is established and managed by Josh Gitlin, reflecting our commitment to security and trustworthiness in digital communications.
+    </p>
+    <h2>Available Resources</h2>
+    <ul>
+        <li><a href="/df-root/DigitalFruitionRootCA.pem">Public Certificate</a></li>
+        <li><a href="/df-root/crl.pem">Certificate Revocation List (CRL)</a></li>
+        <li><a href="https://www.digitalfruition.com/">Digital Fruition Website</a></li>
+    </ul>
+    <h2>Usage</h2>
+    <p>
+        To use this CA for verifying certificates or for incorporating into your system, download the public certificate and refer to your system's documentation on trusting new certificate authorities.
+    </p>
+    <h2>Contact</h2>
+    <p>
+        For questions, inquiries or issues related to this Certificate Authority, please contact <a href="mailto:ca@digitalfruition.com">ca@digitalfruition.com</a>.
+    </p>
+    <section id="installation">
+      <h2>Trusting the CA Certificate</h2>
+      <p>To ensure secure communication, please install and trust the CA certificate on your system. Here are the instructions for macOS, Linux, and Windows:</p>
+      
+      <h3>macOS:</h3>
+      <ol>
+          <li>Download the CA Certificate.</li>
+          <li>Open Keychain Access (Applications > Utilities).</li>
+          <li>Add the certificate to the System keychain (drag and drop or use File > Import Items).</li>
+          <li>Trust the certificate by double-clicking it, expanding the Trust section, and selecting Always Trust.</li>
+          <li>Close the certificate window and save changes if prompted.</li>
+      </ol>
+      
+      <h3>Linux (Ubuntu):</h3>
+      <ol>
+          <li>Download the CA Certificate.</li>
+          <li>Copy the certificate to <code class="path">/usr/local/share/ca-certificates/</code></li>
+          <li>Update the CA store with <code class="shell">sudo update-ca-certificates</code>.</li>
+      </ol>
+      
+      <h3>Windows:</h3>
+      <ol>
+          <li>Download the CA Certificate.</li>
+          <li>Start the Certificate Import Wizard by double-clicking the certificate file and clicking Install Certificate.</li>
+          <li>Select Local Machine and click Next.</li>
+          <li>Place all certificates in the following store: Trusted Root Certification Authorities.</li>
+          <li>Finish the installation and confirm any security prompts.</li>
+      </ol>
+      
+      <p><strong>Note:</strong> Installing a CA certificate typically requires administrative privileges. Only trust certificates from known and trusted entities.</p>
+  </section>  
+</body>
+</html>
